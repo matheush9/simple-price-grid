@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --karla: "Karla", sans-serif;
+}
+body {
+  background-color: var(--light-gray);
+  font-family: var(--karla);
+  line-height: 1.7rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > div {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 60vw;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.join {
+  background-color: white;
+  padding: 4vh;
+}
+.join h2 {
+  color: var(--cyan);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.join #pgreen {
+  color: var(--bright-yellow);
+  margin-top: 3vh;
+  font-weight: bold;
+}
+.join p {
+  margin-top: 2vh;
+  color: var(--grayish-blue);
+}
+.sub {
+  background-color: var(--cyan);
+  padding: 6vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.sub h2 + p {
+  margin-top: 2vh;
+  font-size: 1.6rem;
+}
+.sub span {
+  color: rgba(255, 255, 255, 0.603);
+  font-size: 1rem;
+  margin-left: 0.6rem;
+}
+.sub #pgray {
+  color: rgba(255, 255, 255, 0.808);
+}
+.sub button {
+  background-color: var(--bright-yellow);
+  color: rgb(255, 255, 255);
+  padding: 2vh;
+  margin-top: 3vh;
+  font-family: var(--karla);
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sub button:hover {
+  background-color: rgb(146, 219, 37);
+  transition: 1s;
+}
+.why-us {
+  background-color: hsl(179, 63%, 46%);
+  padding: 6vw;
+  color: white;
+  line-height: 1.2rem;
+}
+ul {
+  margin-top: 2vh;
+}
+li {
+  font-size: 0.8rem;
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.712);
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  body > div {
+    margin: 5vh;
+    display: grid;
+    width: 90vw;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  body > div {
+    display: grid;
+  }
+  .join {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    padding: 4vw;
+  }
+  .sub {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 3vw;
+  }
+  .why-us {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 3vw;
+  }
+}
